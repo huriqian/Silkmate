@@ -11,20 +11,20 @@
             border-collapse: collapse;
             text-align: center;
         }
-
+        
         th,
         td {
             text-align: center;
         }
-
+        
         thead tr {
             height: 50px;
         }
-
+        
         thead tr th {
             font-size: 18px;
         }
-
+        
         tbody tr {
             height: 40px;
         }
@@ -33,27 +33,27 @@
 <body>
 <table class="table-striped table-bordered table-hover">
     <thead>
-        <tr>
-            <th colspan="6">环境信息</th>
-        </tr>
-        <tr>
-            <th>记录序号</th>
-            <th>摄像头ID</th>
-            <th>环境温度</th>
-            <th>环境湿度</th>
-            <th>环境AQI</th>
-            <th>上传时间</th>
-        </tr>
+    <tr>
+        <th colspan="6">环境信息</th>
+    </tr>
+    <tr>
+        <th>记录序号</th>
+        <th>摄像头ID</th>
+        <th>环境温度</th>
+        <th>环境湿度</th>
+        <th>环境AQI</th>
+        <th>上传时间</th>
+    </tr>
     </thead>
     <tbody>
-        <tr th:each="env : ${envList}">
-            <td th:text="${env.id}"></td>
-            <td th:text="${env.cameraId}"></td>
-            <td th:text="${env.envTemperature}"></td>
-            <td th:text="${env.envHumidness}"></td>
-            <td th:text="${env.envAqi}"></td>
-            <td th:text="${env.updateTime}"></td>
-        </tr>
+    <tr th:each="env : ${envList}">
+        <td th:text="${env.id}"></td>
+        <td th:text="${env.cameraId}"></td>
+        <td th:text="${env.envTemperature}"></td>
+        <td th:text="${env.envHumidness}"></td>
+        <td th:text="${env.envAqi}"></td>
+        <td th:text="${env.updateTime}"></td>
+    </tr>
     </tbody>
 </table>
 </body>

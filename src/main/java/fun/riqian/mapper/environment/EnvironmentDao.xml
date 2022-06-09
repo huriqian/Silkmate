@@ -6,7 +6,7 @@
 
     <!-- List<Environment> findALl(); -->
     <select id="findALl" resultType="Environment">
-        select * from env_record limit 10
+        select * from env_record limit 15
     </select>
 
     <!-- Environment getEnvById(Integer id); -->

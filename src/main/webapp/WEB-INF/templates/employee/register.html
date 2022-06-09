@@ -4,21 +4,45 @@
     <meta charset="UTF-8">
     <title>注册账户</title>
     <link rel="stylesheet" th:href="@{/static/css/bootstrap/css/bootstrap.css}" />
+    <style>
+        form {
+            width: 500px;
+            margin: 100px auto;
+            padding: 20px 40px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-<form th:action="@{/employee/save}" method="post" role="form">
-    <div class=".form-group">
-        姓名:<input type="text" name="empName" placeholder="请输入姓名" class="form-control"><br>
+<form th:action="@{/employee/save}" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">名字</label>
+        <div class="col-sm-10">
+            <input type="text" name="empName" placeholder="请输入姓名" class="form-control"><br>
+        </div>
     </div>
    <div class="form-group">
-       性别:<input type="radio" name="gender" value="1">男
-       <input type="radio" name="gender" value="0">女<br>
+       <label class="col-sm-2 control-label">性别</label>
+       <div class="checkbox">
+               <label>
+                   <input type="radio" name="gender" value="1">男
+               </label>
+               <label>
+                   <input type="radio" name="gender" value="0">女
+               </label>
+       </div>
    </div>
     <div class="form-group">
-        年龄:<input type="text" name="age" placeholder="请输入年龄" class="form-control"><br>
+        <label class="col-sm-2 control-label">年龄</label>
+        <div class="col-sm-10">
+            <input type="text" name="age" placeholder="请输入年龄" class="form-control"><br>
+        </div>
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-default">提交</button>
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">提交</button>
+        </div>
     </div>
 </form>
 </body>

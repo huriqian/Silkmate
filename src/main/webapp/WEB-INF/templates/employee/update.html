@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>更新账户</title>
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/css/bootstrap.css}">
+    <style>
+        form {
+            width: 500px;
+            margin: 100px auto;
+            padding: 20px 40px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
-<form th:action="@{'/employee/save/' + ${employee.id}}" method="post">
+<form th:action="@{'/employee/save/' + ${employee.id}}" method="post" class="form-horizontal">
     <input type="hidden" name="_method" value="put">
     <input type="hidden" name="id" th:value="${employee.id}">
-    姓名: <input type="text" name="empName" th:value="${employee.empName}"><br>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">姓名</label>
+        <div class="col-sm-10">
+            <input type="text" name="empName" th:value="${employee.empName}"><br>
+        </div>
+    </div>
     <!--
         th:field="${employee.gender}"可用于单选框或复选框的回显
         若单选框的value和employee.gender的值一致，则添加checked="checked"属性
     -->
-    性别: <input type="radio" name="gender" value="1" th:field="${employee.gender}">男
-    <input type="radio" name="gender" value="0" th:field="${employee.gender}">女<br>
-    年龄: <input type="text" name="age" th:value="${employee.age}"><br>
-    <input type="submit" value="更新"><br>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">性别</label>
+        <div class="checkbox">
+            <label>
+                <input type="radio" name="gender" value="1" th:field="${employee.gender}">男
+            </label>
+            <label>
+                <input type="radio" name="gender" value="0" th:field="${employee.gender}">女
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">年龄</label>
+        <div class="col-sm-10">
+            <input type="text" name="age" th:value="${employee.age}">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">更新</button>
+        </div>
+    </div>
 </form>
 
 </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>环境列表</title>
+</head>
+<body>
+<table id="dataTable" border="1" cellspacing="0" cellpadding="5" style="text-align: center; margin: 40px auto">
+    <tr>
+        <th colspan="5">环境信息</th>
+    </tr>
+    <tr>
+        <th>记录序号</th>
+        <th>摄像头ID</th>
+        <th>环境温度</th>
+        <th>环境湿度</th>
+        <th>环境AQI</th>
+        <th>上传时间</th>
+    </tr>
+    <tr th:each="env : ${envList}">
+        <td th:text="${env.id}"></td>
+        <td th:text="${env.cameraId}"></td>
+        <td th:text="${env.envTemperature}"></td>
+        <td th:text="${env.envHumidness}"></td>
+        <td th:text="${env.envAqi}"></td>
+        <td th:text="${env.updateTime}"></td>
+    </tr>
+</table>
+</body>
+</html>

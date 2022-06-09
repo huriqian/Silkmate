@@ -1,7 +1,7 @@
-package fun.riqian.controller;
+package fun.riqian.controller.employee;
 
 import fun.riqian.domain.Employee;
-import fun.riqian.service.EmployeeService;
+import fun.riqian.service.employee.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

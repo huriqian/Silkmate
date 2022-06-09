@@ -2,30 +2,30 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="fun.riqian.dao.EmployeeDao">
+<mapper namespace="fun.riqian.dao.employee.EmployeeDao">
 
     <!-- List<Employee> findAll(); -->
     <select id="findAll" resultType="Employee">
-        select * from silkmate.employees
+        select * from employees
     </select>
 
     <!-- Employee getEmployeeById(Integer id); -->
     <select id="getEmployeeById" resultType="Employee">
-        select * from silkmate.employees where id = #{id}
+        select * from employees where id = #{id}
     </select>
 
     <!-- int insertEmployee(Employee employee); -->
     <insert id="insertEmployee">
-        insert into silkmate.employees values (null, #{empName}, #{gender}, #{age})
+        insert into employees values (null, #{empName}, #{gender}, #{age})
     </insert>
 
     <!-- int deleteEmployee(Integer id); -->
     <delete id="deleteEmployee">
-        delete from silkmate.employees where id = #{id}
+        delete from employees where id = #{id}
     </delete>
 
     <!-- int updateEmployee(Employee employee); -->
     <update id="updateEmployee">
-        update silkmate.employees set emp_name = #{empName}, gender = #{gender}, age = #{age} where id = #{id}
+        update employees set emp_name = #{empName}, gender = #{gender}, age = #{age} where id = #{id}
     </update>
 </mapper>

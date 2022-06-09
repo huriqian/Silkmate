@@ -1,17 +1,17 @@
-package fun.riqian.service;
+package fun.riqian.dao.employee;
 
 import fun.riqian.domain.Employee;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface EmployeeService {
+@Repository
+public interface EmployeeDao {
 
-    // 查询所有用户信息
     List<Employee> findAll();
 
     Employee getEmployeeById(Integer id);
 
-    // 增加一条用户信息
     void insertEmployee(Employee employee);
 
     void deleteEmployee(Integer id);

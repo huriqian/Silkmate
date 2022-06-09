@@ -2,15 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>云端存储</title>
+    <title>桑舞蚕动</title>
 </head>
 <body>
 <h1>欢迎进入前后端分离的新世界</h1>
-<!-- <a th:href=""></a> -->
 <a th:href="@{/employee/list}">查询所有员工(浏览器访问)</a>
 <br>
 <a th:href="@{/employee/findAll}">查询所有员工(微信小程序访问)</a>
 <hr>
-<a href="https://beian.miit.gov.cn/">浙ICP备2021025267号-1</a>
+<a th:href="@{/environment/findAll}">查询所有蚕室环境记录(微信小程序访问)</a>
+<hr>
+<a href="https://beian.miit.gov.cn/">浙ICP备2021025267号-2</a>
 </body>
 </html>

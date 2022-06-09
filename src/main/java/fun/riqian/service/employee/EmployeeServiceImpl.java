@@ -1,7 +1,8 @@
-package fun.riqian.service;
+package fun.riqian.service.employee;
 
-import fun.riqian.dao.EmployeeDao;
+import fun.riqian.dao.employee.EmployeeDao;
 import fun.riqian.domain.Employee;
+import fun.riqian.service.employee.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
